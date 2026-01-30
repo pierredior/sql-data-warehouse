@@ -1,9 +1,12 @@
 
-# Proyek Gudang Data SQL
+# SQL Data Warehouse Project
 
-Proyek ini adalah contoh pipeline ETL (Extract, Transform, Load) untuk membangun gudang data dari beberapa sumber data.
+This is an example ETL (Extract, Transform, Load) pipeline for building a data warehouse from multiple data sources. The project implements a three-tier data architecture (Bronze, Silver, Gold) with star schema design.
 
-## Struktur Proyek
+## Live Demo
+Check out our deployed application: [https://kelompok-nine.streamlit.app/](https://kelompok-nine.streamlit.app/)
+
+## Project Structure
 
 ```
 .
@@ -21,38 +24,66 @@ Proyek ini adalah contoh pipeline ETL (Extract, Transform, Load) untuk membangun
 └── README.md
 ```
 
-## Cara Menjalankan
+## Technologies Used
+- Python
+- Pandas
+- SQLAlchemy
+- SQLite
+- Streamlit
+- SQL
 
-### 1. Persyaratan
+## Architecture Overview
+- **Bronze Layer**: Raw data layer (staging area)
+- **Silver Layer**: Cleaned and transformed data
+- **Gold Layer**: Aggregated data for reporting and analytics
 
-Pastikan Anda memiliki Python 3.8+ terinstal. Anda juga perlu menginstal beberapa pustaka Python.
+## Dashboard Features
+- Interactive visualizations
+- Sales analytics
+- Customer insights
+- Product performance metrics
+
+## How to Run
+
+### 1. Prerequisites
+
+Make sure you have Python 3.8+ installed. You'll also need to install some Python libraries.
 
 ```bash
 pip install pandas sqlalchemy streamlit
 ```
 
-### 2. Hasilkan Data Awal
+### 2. Generate Sample Data
 
-Langkah pertama adalah menjalankan skrip untuk menghasilkan atau menyiapkan data mentah.
+First, run the script to generate or prepare raw data.
 
 ```bash
 python generate_dummy_data.py
 ```
 
-### 3. Bangun Gudang Data (ETL)
+### 3. Build Data Warehouse (ETL)
 
-Setelah data mentah siap, jalankan pipeline ETL untuk memprosesnya dan memuatnya ke dalam gudang data dengan skema bintang.
+After the raw data is ready, run the ETL pipeline to process it and load it into the data warehouse with star schema design.
 
 ```bash
 python etl_pipeline.py
 ```
 
-### 4. Jalankan Dashboard
+### 4. Run Dashboard
 
-Untuk memvisualisasikan data dan memastikan semuanya terhubung dengan benar, jalankan aplikasi dashboard Streamlit.
+To visualize the data and ensure everything is connected properly, run the Streamlit dashboard application.
 
 ```bash
 streamlit run dashboard.py
 ```
 
-Buka browser Anda dan navigasikan ke alamat URL yang ditampilkan di terminal.
+Open your browser and navigate to the URL displayed in the terminal.
+
+## Contributing
+Contributions are welcome! Feel free to submit a Pull Request.
+
+## Repository
+Find this project on GitHub: [https://github.com/pierredior/sql-data-warehouse](https://github.com/pierredior/sql-data-warehouse)
+
+## License
+This project is open source and available under the [MIT License](LICENSE).
